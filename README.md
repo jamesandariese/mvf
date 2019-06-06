@@ -3,18 +3,22 @@
 
 ## SYNOPSIS
 
-    mvf -s <re> -S -X -P -f <format> -y <filenames>
-
+    mvf [-s <re>] [-S] [-X] [-P] [-f <format>] [-y <filenames>] [-x <sep>] [-z <num>] [-Z <num>]
+    
+    # transformations -- if none are specified, -S is assumed
     -s <re>       split filenames on regex (groups will be saved in terms)
     -S            same as -s '[\s-_.]+'
+    
+    # options
     -X            do not extract extensions
     -x <sep>      extension separator (default = '.')
     -z <num>      extension segment size limit (default = 4)
     -Z <num>      extension segment count limit (default = 99999)
-    -c
     -P            do not extract path
+    
+    # target files
     -f <format>   target filename format
-    -y            execute the moves
+    -y            execute the move
 
 ## USAGE
 

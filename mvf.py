@@ -17,7 +17,6 @@ def help(xcode=0):
 -s <re>       split filenames on regex (groups will be saved in terms)
 -S            same as -s '[\s-_.]+'
 
-
 # options
 -X            do not extract extensions
 -x <sep>      extension separator (default = '.')
