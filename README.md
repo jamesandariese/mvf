@@ -16,9 +16,9 @@
     -f <format>   target filename format
     -y            execute the moves
 
-USAGE
+## USAGE
 
-## step 1
+### step 1
 ```
 mvf *
 ```
@@ -27,20 +27,20 @@ Create the dictionary of terms to be used to build target filenames.
 This step will execute your transformation extraction steps and print
 the resulting dictionary.
 
-## step 2
+### step 2
 ```
 mvf * -f '{p10:03d}.{ext}'
 ```
 
 Print the original and formatted filenames to confirm your work.
 
-## step 3
+### step 3
 ```
 mvf * -f '{p10:03d}.{ext}' -y
 ```
 
 Execute the moves.
 
-# LICENSE
+## COPYRIGHT
 
-
+Copyright (c) 2019 James Andariese
