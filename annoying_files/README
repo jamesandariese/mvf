@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# try running this
+
+
+mvf *.mkv -Z 1 -f 'S{p6:02d}E{p8:02d} My Favorite Television Show.{ext}'
+
+# My_Favorite_Television_Show_-_Season 1_-_Episode 2.2019.mkv
+# becomes
+# S01E02 My Favorite Television Show.mkv
+
+# My_Favorite_Television_Show_-_Season 1_-_Episode 3.2019.mkv
+# becomes
+# S01E03 My Favorite Television Show.mkv
+
+# My_Favorite_Television_Show_-_Season 2_-_Episode 12.2019.mkv
+# becomes
+# S02E12 My Favorite Television Show.mkv
+
+# My_Favorite_Television_Show_-_Season 2_-_Episode 13.2019.mkv
+# becomes
+# S02E13 My Favorite Television Show.mkv
+
+# README is skipped
+
+# -Z 1 only captures just one extension segment (mkv)
+# -f
+#    S inserts a literal 'S'
+#    {p6:02d} formats p6 (the number after Season) as 2 digits with 0 padding
+#    E inserts a literal 'E'
+#    {p8:02d} formats p8 (the number after Episode) as 2 digits with 0 padding
+#    My Favorite Television Show inserts a literal ' My Favorite Television Show'
+#    {ext} inserts the extension
